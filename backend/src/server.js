@@ -5,7 +5,7 @@ const cors = require('cors');
 const routes = require('./routes');
 const server = express();
 
-// mongoose.connect('mongodb+srv://lukita:lukita@cluster0-gsrbh.mongodb.net/test?retryWrites=true&w=majority', {
+// mongoose.connect('mongodb+srv://lukita:lukita@cluster0-gsrbh.mongodb.net/tindev?retryWrites=true&w=majority', {
 // useNewUrlParser: true
 // });
 
@@ -17,4 +17,4 @@ server.use(cors());
 server.use(express.json());
 server.use(routes);
 
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
